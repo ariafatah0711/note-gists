@@ -1,1 +1,31 @@
-test
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notepad Online (GitHub Gist)</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- <script src="script.js" type="module" defer></script> -->
+    <script src="assets/script/vercel.js" defer></script>
+</head>
+<body>
+    <h2>Notepad Online (GitHub Gist)</h2>
+
+    <h3>Editor</h3>
+    <div id="editor" style="display: none;">
+        <div id="file-name-container">
+            <span id="file-name">Nama File</span>
+            <button id="close-editor" class="exit-btn" onclick="closeEditor()">❌</button>
+        </div>
+        <textarea id="file-content"></textarea>
+        <div class="button-container">
+            <button class="edit-btn" onclick="saveGist()">Simpan</button>
+            <button class="delete-btn" onclick="deleteFile()">Hapus File</button>
+        </div>
+    </div>
+
+    <h3>Daftar Gist</h3>
+    <button class="add-gist-btn" onclick="addGist()">+ Tambah Gist</button>
+    <ul id="gist-list"></ul>
+</body>
+</html>

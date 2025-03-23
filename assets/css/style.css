@@ -1,0 +1,347 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+h2,
+h3 {
+    color: #222;
+    margin-bottom: 10px;
+}
+
+/* Gist List */
+#gist-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#gist-list button {
+    display: flex;
+}
+
+.gist-item {
+    background: white;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px 0;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Gist Header */
+.gist-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.gist-body {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.gist-id {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.gist-id img {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+
+/* Buttons */
+button {
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.add-gist-btn {
+    background: #28a745;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.delete-btn {
+    background: red;
+    color: white;
+}
+
+.edit-btn {
+    background: none !important;
+    /* background: #007BFF; */
+    /* color: white; */
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* Input Container */
+/* .input-container {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+} */
+
+/* .input-container input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+} */
+
+.add-btn {
+    background: green;
+    color: white;
+}
+
+/* File List */
+/* .file-list {
+    margin-top: 10px;
+    padding: 0;
+    list-style: none;
+    text-align: left;
+}
+
+.file-list li {
+    padding: 5px 0;
+}
+
+.file-list a {
+    text-decoration: none;
+    color: blue;
+    transition: 0.2s;
+}
+
+.file-list a:hover {
+    text-decoration: underline;
+} */
+
+.file-list {
+    margin-top: 10px;
+    padding: 0;
+    list-style: none;
+    text-align: left;
+    padding-top: 8px;
+}
+
+.file-list li {
+    padding: 8px;
+    border-radius: 5px;
+    transition: background 0.2s;
+}
+
+.file-list li:hover {
+    background: #f0f0f0;
+    /* Efek hover */
+}
+
+.file-list a {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: 500;
+    display: block;
+    padding: 5px;
+}
+
+.file-list a:hover {
+    text-decoration: underline;
+}
+
+
+/* Editor */
+#editor {
+    display: none;
+    flex-direction: column;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: left;
+}
+
+#file-name {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#file-name-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+/* #close-editor {
+    background: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+#close-editor:hover {
+    opacity: 0.8;
+} */
+
+textarea {
+    display: flex;
+    height: 200px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    resize: vertical;
+    font-family: monospace;
+    font-size: 14px;
+}
+
+.button-container {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+
+    .gist-item,
+    #editor {
+        width: 95%;
+    }
+
+    .input-container {
+        flex-direction: column;
+    }
+
+    .input-container input {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+}
+
+/* detail */
+details {
+    display: block;
+    width: 100%;
+    /* Sesuaikan dengan kebutuhan */
+}
+
+summary {
+    display: block;
+    width: 100%;
+    /* Pastikan lebarnya sama dengan details */
+    cursor: pointer;
+    /* Opsional: Tambahkan efek pointer */
+}
+
+.file-detais {
+    display: flex;
+    color: red;
+}
+
+.file-summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.file-summary .gist-id {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    /* Jarak antara icon GitHub dan ID */
+}
+
+.file-summary .gist-body {
+    display: flex;
+    gap: 8px;
+    /* Jarak antara tombol */
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+
+    /* Tablet */
+    .gist-item,
+    #editor {
+        width: 90%;
+    }
+
+    .gist-id,
+    #file-name {
+        font-size: 0.85em;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .gist-id,
+    #file-name {
+        font-size: 0.65em;
+    }
+
+    .input-container {
+        flex-direction: column;
+    }
+
+    .input-container input {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .gist-id,
+    #file-name {
+        font-size: 0.55em;
+    }
+}
+
+.gist-id,
+#file-name {
+    white-space: nowrap;
+    /* Mencegah teks turun ke baris baru */
+    overflow: hidden;
+    /* Sembunyikan teks yang kelebihan */
+    text-overflow: ellipsis;
+    /* Tambahkan "..." jika teks terlalu panjang */
+    max-width: 100%;
+    /* Pastikan tidak melebihi parent */
+    display: block;
+    /* Pastikan tetap inline */
+}

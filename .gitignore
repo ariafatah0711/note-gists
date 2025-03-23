@@ -1,0 +1,4 @@
+.vercel
+token.js
+node_modules
+dist
